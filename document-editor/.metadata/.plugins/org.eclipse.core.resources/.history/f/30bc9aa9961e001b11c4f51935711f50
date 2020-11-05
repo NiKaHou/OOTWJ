@@ -1,0 +1,18 @@
+package decorator_pattern;
+
+import javax.jws.soap.SOAPBinding.Style;
+
+public class Widget implements DecoratorComponent{
+	String style = "";
+	
+	@Override
+	public String getStyle() {
+		return this.style;
+	}
+
+	@Override
+	public void setStyle(String style) {
+		this.style = style;
+	}
+	
+}

@@ -1,0 +1,37 @@
+package bridge_pattern;
+import java.io.File;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+
+
+
+public class FileItemProcess_Linux implements FileItemProcess{
+	FileChooser fileChooser = new FileChooser();
+	String pathname = "C:/Users/User/Documents/";
+	
+	public void SaveProcess(Stage stage) {		
+		fileChooser.setInitialDirectory(new File(pathname));
+		fileChooser.setTitle("¶s¿…");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+        fileChooser.showSaveDialog(stage);
+        File fileS = fileChooser.showSaveDialog(stage);
+        //System.out.print(fileS);
+        //BufferedWriter writer;
+	}
+
+	public void OpenProcess(Stage stage) {		
+		fileChooser.setInitialDirectory(new File(pathname));		
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+        File fileO = fileChooser.showOpenDialog(stage);
+        //System.out.println(fileO);
+
+	}
+	
+	public void NewProcess(Stage stage) {
+		System.out.println("NewFile");
+	}
+
+}

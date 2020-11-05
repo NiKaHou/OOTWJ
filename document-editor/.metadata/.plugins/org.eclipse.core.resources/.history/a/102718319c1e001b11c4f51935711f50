@@ -1,0 +1,7 @@
+package snippet;
+
+public class Snippet {
+	DecoratorComponent component = new Widget();
+	
+}
+

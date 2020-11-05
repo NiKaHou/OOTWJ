@@ -1,0 +1,5 @@
+package abstract_pattern;
+
+public class WidgetFactorySmall extends WidgetFactory{
+
+}

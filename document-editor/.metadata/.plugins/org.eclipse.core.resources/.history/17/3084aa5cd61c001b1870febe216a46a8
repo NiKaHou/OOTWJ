@@ -1,0 +1,14 @@
+package abstract_pattern;
+
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.HTMLEditor;
+
+public class ProductHtmlEditor extends HTMLEditor{
+	public ProductHtmlEditor() {
+		// TODO Auto-generated constructor stub
+		AnchorPane.setLeftAnchor(this, 0.0);
+		AnchorPane.setTopAnchor(this, 32.0);
+		AnchorPane.setLeftAnchor(this, 0.0);
+		AnchorPane.setLeftAnchor(this, 0.0);
+	}
+}

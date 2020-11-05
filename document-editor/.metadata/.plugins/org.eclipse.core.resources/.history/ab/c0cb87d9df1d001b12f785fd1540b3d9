@@ -1,0 +1,6 @@
+package decorator;
+
+public class Decorator implements DecoratorComponent{
+	private String style;
+	
+}

@@ -1,0 +1,16 @@
+package abstract_pattern;
+
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.HTMLEditor;
+import javafx.scene.web.WebView;
+
+public class SmallHTMLEditor extends HTMLEditor{
+	public SmallHTMLEditor() {
+		AnchorPane.setLeftAnchor(this, 0.0);
+		AnchorPane.setTopAnchor(this, 32.0);
+		AnchorPane.setRightAnchor(this, 0.0);
+		AnchorPane.setBottomAnchor(this, 0.0);
+		WebView webView = (WebView)this.lookup(".web-view");
+		webView.setPrefHeight(9000);
+	}
+}

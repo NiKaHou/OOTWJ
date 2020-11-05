@@ -1,0 +1,9 @@
+package abstract_pattern;
+
+import javafx.scene.control.Menu;
+
+public class LargeMenu extends Menu{
+	public LargeMenu() {
+		this.setMnemonicParsing(false);
+	}
+}

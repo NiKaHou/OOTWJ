@@ -1,0 +1,21 @@
+package abstract_pattern;
+
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.ToolBar;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class WidgetFactorySmall extends WidgetFactory{
+
+	public WidgetFactorySmall(Stage stage) {
+		super(stage);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void createWidgets() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

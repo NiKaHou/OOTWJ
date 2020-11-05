@@ -1,0 +1,11 @@
+package decorator_pattern;
+
+public class Widgets implements DecoratorComponent{
+	
+	@Override
+	public void getStyle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

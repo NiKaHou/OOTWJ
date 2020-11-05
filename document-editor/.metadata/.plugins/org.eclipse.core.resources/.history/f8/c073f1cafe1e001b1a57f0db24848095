@@ -1,0 +1,7 @@
+package composite_pattern;
+
+import javafx.scene.control.MenuItem;
+
+public class MenuBarLeaf extends MenuBarComponent{
+	private MenuItem menuItem;
+}

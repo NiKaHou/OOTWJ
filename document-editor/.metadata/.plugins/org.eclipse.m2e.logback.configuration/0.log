@@ -1,0 +1,62 @@
+2020-10-10 22:29:36,218 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-10 22:29:44,435 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-10 23:08:23,346 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-10 23:08:32,141 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-11 01:34:22,618 [main] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2020-10-11 01:34:23,173 [Worker-16: Queuing new CSS Event...] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2020-10-12 10:33:17,585 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-12 10:33:27,815 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-12 20:31:34,741 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-12 20:31:43,741 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-12 20:32:06,291 [main] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2020-10-12 20:32:11,213 [Worker-19: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2020-10-12 21:56:29,543 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-12 21:56:38,426 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-21 21:34:03,827 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-21 21:34:13,180 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-21 21:34:13,304 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2020-10-22 00:07:04,503 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-22 00:07:20,311 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-24 23:38:32,608 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-24 23:38:41,478 [Worker-11: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-25 01:12:11,790 [Worker-33: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2020-10-25 01:12:11,840 [Worker-33: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2020-10-27 15:38:31,471 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-27 15:38:40,800 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-27 20:30:36,439 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-27 20:30:43,892 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-27 20:46:15,025 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-27 20:46:23,602 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-28 11:07:03,535 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-28 11:07:18,445 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-28 13:45:58,094 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-28 13:46:09,007 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-28 14:10:48,329 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-28 14:10:55,918 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-29 17:04:25,406 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-29 17:04:35,159 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-29 18:36:15,579 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-29 18:36:25,815 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-30 08:46:33,714 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-30 08:46:41,683 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-30 10:26:02,414 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-30 10:26:10,494 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-02 13:55:57,953 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-02 13:56:07,243 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-02 13:56:07,447 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2020-11-02 15:49:03,694 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-02 15:49:10,852 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-02 15:50:16,203 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-02 15:50:25,711 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-03 10:31:46,641 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-03 10:31:56,354 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-03 19:30:16,078 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-03 19:30:23,941 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-03 21:15:40,472 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-03 21:15:48,466 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-04 19:26:36,021 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-04 19:26:45,415 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-05 07:27:26,999 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-05 07:27:35,967 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-05 10:01:20,468 [Worker-6: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2020-11-05 10:01:20,507 [Worker-6: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\user\Desktop\OO\OO-project\document-editor\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store

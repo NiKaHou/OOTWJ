@@ -1,0 +1,11 @@
+package abstract_pattern;
+
+import javafx.scene.control.MenuItem;
+
+public class LargeMenuItem extends MenuItem{
+	public LargeMenuItem() {
+		this.setMnemonicParsing(false);
+		this.setStyle("-fx-font-size: 18px;");
+		this.setStyle("-fx-background-color: #000000;");
+	}
+}

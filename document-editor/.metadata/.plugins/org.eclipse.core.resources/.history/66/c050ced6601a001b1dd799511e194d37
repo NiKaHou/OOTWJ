@@ -1,0 +1,11 @@
+package abstract_pattern;
+
+import javafx.stage.Stage;
+
+abstract public class WidgetFactory {
+	protected Stage stage;
+	public WidgetFactory(Stage stage) {
+		this.stage = stage;
+	}
+	public void createWidgets();
+}

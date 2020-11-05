@@ -1,0 +1,61 @@
+import java.io.IOException;
+
+import abstract_pattern.WidgetFactory;
+import abstract_pattern.WidgetFactoryLarge;
+import abstract_pattern.WidgetFactorySmall;
+import factory_pattern.WindowFactory;
+import factory_pattern.WindowFactorySmall;
+import factory_pattern.WindowFactoryLarge;
+import javafx.fxml.FXML;
+
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.stage.Stage;
+
+public class SettingPageListener {
+	@FXML
+	private RadioButton radio_small;
+	@FXML
+	private RadioButton radio_full;
+	@FXML
+	private Button comfirmSizeButton;
+	@FXML
+	public void initialize() {
+		initSettingPage();
+	}	
+	private void initSettingPage() {
+		comfirmSizeButton.setOnAction(EventHandler -> {
+			try {
+				if (radio_full.isSelected()) {
+					createMainPageSmall();
+				}else{
+					createMainPageLarge();
+				}
+				Main.getSettingStage().hide();
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+		});
+		radio_small.setOnAction(EventHandler -> {
+			radio_full.setSelected(false);
+		});
+		radio_full.setOnAction(EventHandler -> {
+			radio_small.setSelected(false);
+		});
+	}
+	private void createMainPageSmall() throws IOException {
+		WindowFactory<Main> windowFactory = new WindowFactorySmall<Main>(Main.getInstance());
+		Stage stage = windowFactory.createMainPage();
+		WidgetFactory widgetFactory = new WidgetFactorySmall(stage);
+		widgetFactory.createWidgets();
+		
+	}
+	private void createMainPageLarge() throws IOException {
+		WindowFactory<Main> windowFactory = new WindowFactoryLarge<Main>(Main.getInstance());
+		Stage stage = windowFactory.createMainPage();
+		WidgetFactory widgetFactory = new WidgetFactoryLarge(stage);
+		widgetFactory.createWidgets();
+	}
+
+}

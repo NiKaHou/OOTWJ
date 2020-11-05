@@ -1,0 +1,11 @@
+package strategy_pattern;
+
+public class WindowSizeFlexible implements WindowSize{
+
+	@Override
+	public void setWindowSize() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

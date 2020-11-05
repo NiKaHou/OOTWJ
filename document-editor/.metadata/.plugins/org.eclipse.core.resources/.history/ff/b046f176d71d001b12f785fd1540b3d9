@@ -1,0 +1,6 @@
+package decorator;
+
+public interface DecoratorComponent {
+	public void setStyle();
+	
+	}

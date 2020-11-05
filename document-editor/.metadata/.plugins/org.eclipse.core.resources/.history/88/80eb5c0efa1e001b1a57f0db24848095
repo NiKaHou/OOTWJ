@@ -1,0 +1,41 @@
+
+package bridge_pattern;
+
+import java.io.File;
+import java.lang.Thread.State;
+import java.util.ArrayList;
+import java.util.List;
+
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+
+
+
+public class FileItemProcess_Window implements FileItemProcess{
+	FileChooser fileChooser = new FileChooser();
+	List<String> extensionsList = new ArrayList<String>();
+
+	String pathname = "C:\\Users\\User\\Documents\\";
+	
+	public void SaveProcess(Stage stage) {		
+		fileChooser.setInitialDirectory(new File(pathname));
+		fileChooser.setTitle("¶s¿…");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+        File fileS = fileChooser.showSaveDialog(stage);
+        
+        
+	}
+
+	public void OpenProcess(Stage stage) {		
+		fileChooser.setInitialDirectory(new File(pathname));		
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+        File fileO = fileChooser.showOpenDialog(stage);
+
+
+	}
+	
+}

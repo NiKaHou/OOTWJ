@@ -1,0 +1,44 @@
+package composite_pattern;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+public class MenuBarComposite extends MenuBarComponent{
+	LinkedList<MenuBarComponent> linkedList = new LinkedList<MenuBarComponent>();
+	private String title;
+	private String type;
+	public MenuBarComposite(String title, String type) {
+		this.title = title;
+		this.type = type;
+	}
+	@Override
+	public void add(MenuBarComponent component) {
+		linkedList.add(component);
+	}
+	@Override
+	public void remove(MenuBarComponent component) {
+		linkedList.remove(component);
+	}
+	@Override
+	public boolean hasChild() {
+		if(linkedList.size() > 0) {
+			return true;
+		}
+		return false;
+	}
+	@Override
+	public Map<String, MenuBarComponent> getChild() {
+
+	}
+	@Override
+	public String getTitle() {
+
+		return this.title;
+	}
+	@Override
+	public String getType() {
+
+		return this.type;
+	}
+}

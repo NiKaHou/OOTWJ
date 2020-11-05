@@ -1,0 +1,23 @@
+package abstract_pattern;
+
+import decorator_pattern.DecoratorComponent;
+import javafx.scene.control.MenuBar;
+import javafx.scene.layout.AnchorPane;
+
+public class LargeMenuBar extends MenuBar implements DecoratorComponent{
+	LargeMenuBar(){
+		AnchorPane.setLeftAnchor(this, 0.0);
+		AnchorPane.setTopAnchor(this, 0.0);
+		AnchorPane.setRightAnchor(this, 0.0);
+		this.setPrefHeight(48);
+	}
+	@Override
+	public final String getStyle() {
+
+		return null;
+	}
+	@Override
+	public final void setStyle(String value) {
+
+	}
+}

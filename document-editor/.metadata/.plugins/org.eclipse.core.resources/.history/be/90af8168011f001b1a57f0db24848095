@@ -1,0 +1,17 @@
+package composite_pattern;
+
+public class MenuBarLeaf extends MenuBarComponent{
+	private String title;
+	private String type;
+
+	@Override
+	public String getTitle() {
+
+		return this.title;
+	}
+	@Override
+	public String getType() {
+
+		return this.type;
+	}
+}

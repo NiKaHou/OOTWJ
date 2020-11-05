@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="275.0" prefHeight="300.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingPage">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="請選擇您想要的模式" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="radio_small" layoutX="81.0" layoutY="115.0" mnemonicParsing="false" text="一般模式" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="115.0" />
+      <RadioButton fx:id="radio_full" layoutX="81.0" layoutY="165.0" mnemonicParsing="false" text="深色模式" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="165.0" />
+      <Button fx:id="comfirmSizeButton" layoutX="250.0" layoutY="219.0" mnemonicParsing="false" text="套用" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+package pattern_package;
+
+import java.io.IOException;
+
+abstract public class WindowFactory<Main> {
+	protected Main mainClass;
+	public WindowFactory(Main mainClass) {
+		this.mainClass = mainClass;
+	}
+	abstract public void createMainPage () throws IOException;
+}

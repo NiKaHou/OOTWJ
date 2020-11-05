@@ -1,0 +1,15 @@
+package decorator_pattern;
+
+import javax.swing.plaf.nimbus.ToolBarNorthState;
+
+public class Color extends Decorator{
+	public Color(DecoratorComponent component, String style) {
+		super(component, style);
+	}
+	public void setStyle(String style) {
+		this.style = style;
+	}
+	public String getStyle() {
+		return this.style + this.component.getStyle();
+	}
+}

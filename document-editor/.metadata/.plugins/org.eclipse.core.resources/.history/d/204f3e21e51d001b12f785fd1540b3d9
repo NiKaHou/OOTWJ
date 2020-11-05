@@ -1,0 +1,7 @@
+package decorator_pattern;
+
+abstract public class Widgets implements DecoratorComponent{
+	@Override
+	public abstract void getStyle();
+
+}

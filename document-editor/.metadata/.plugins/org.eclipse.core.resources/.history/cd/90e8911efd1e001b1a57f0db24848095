@@ -1,0 +1,14 @@
+package abstract_pattern;
+
+import decorator_pattern.DecoratorComponent;
+import javafx.scene.control.MenuBar;
+import javafx.scene.layout.AnchorPane;
+
+public class SmallMenuBar extends MenuBar implements DecoratorComponent{
+	SmallMenuBar(){
+		AnchorPane.setLeftAnchor(this, 0.0);
+		AnchorPane.setTopAnchor(this, 0.0);
+		AnchorPane.setRightAnchor(this, 0.0);
+		this.setPrefHeight(32);
+	}
+}

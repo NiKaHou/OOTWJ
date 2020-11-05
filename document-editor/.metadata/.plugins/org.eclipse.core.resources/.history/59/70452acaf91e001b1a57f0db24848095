@@ -1,0 +1,12 @@
+package bridge_pattern;
+
+
+import javafx.stage.Stage;
+
+public interface FileItemProcess {
+	
+	
+	public void SaveProcess(Stage stage);
+	public void OpenProcess(Stage stage);
+	public void NewProcess(Stage stage);
+}

@@ -1,0 +1,17 @@
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.web.HTMLEditor;
+
+public class Controller{
+	@FXML
+	private AnchorPane root;
+	@FXML
+	private HTMLEditor htmlEditor;
+	@FXML
+	public void initialize() {
+		System.out.println("init now");
+		root.getStylesheets().add("/base.css");
+		htmlEditor.getHtmlText()
+	}	
+}

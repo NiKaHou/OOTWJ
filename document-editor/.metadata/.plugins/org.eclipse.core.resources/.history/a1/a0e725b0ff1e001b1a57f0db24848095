@@ -1,0 +1,36 @@
+package composite_pattern;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javafx.scene.control.Menu;
+
+public class MenuBarComposite extends MenuBarComponent{
+	Map<String, MenuBarComposite> map = new HashMap<String, MenuBarComposite>();
+	private String title;
+	private String type;
+	public MenuBarComposite(String title, String type) {
+		this.title = title;
+		this.type = type;
+	}
+	@Override
+	public void add(String title, MenuBarComponent component) {
+		
+		map.put(title, component)
+	}
+	@Override
+	public void remove(String title) {
+
+	}
+	@Override
+	public String getTitle() {
+
+		return this.title;
+	}
+	@Override
+	public String getType() {
+
+		return this.type;
+	}
+}

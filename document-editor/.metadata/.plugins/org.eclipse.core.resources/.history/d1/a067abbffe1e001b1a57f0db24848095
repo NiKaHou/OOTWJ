@@ -1,0 +1,16 @@
+package composite_pattern;
+
+public abstract class MenuBarComponent {
+	public void add() {
+		
+	}
+	public void remove() {
+		
+	}
+	public String getTitle() {
+		
+	}
+	public String getType() {
+		
+	}
+}

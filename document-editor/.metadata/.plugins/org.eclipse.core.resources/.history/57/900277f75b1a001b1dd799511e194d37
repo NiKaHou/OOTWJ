@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPageListener">
+   <children>
+	<MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus fx:id="menus">
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="new" />
+              <MenuItem mnemonicParsing="false" text="save" />
+              <MenuItem mnemonicParsing="false" text="save as" />              
+              <MenuItem mnemonicParsing="false" text="open" />
+              <MenuItem mnemonicParsing="false" text="close" />              
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="A" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Symbol">
+            <items>
+              <MenuItem mnemonicParsing="false" text="A" />
+            </items>
+          </Menu>
+	        <Menu mnemonicParsing="false" text="insert">
+            <items>
+              <MenuItem mnemonicParsing="false" text="img" />
+            </items>
+          </Menu>
+        </menus>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </MenuBar>
+      <HTMLEditor fx:id="htmlEditor" htmlText="" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
+   </children>
+</AnchorPane>

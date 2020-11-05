@@ -1,0 +1,33 @@
+package factory_pattern;
+
+import java.io.IOException;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import strategy_pattern.WindowSizeFlexible;
+
+public class WindowFactoryFlexible<Main> extends WindowFactory<Main>{
+	public WindowFactoryFlexible(Main mainClass) {
+		super(mainClass);
+	}
+
+	@Override
+	public Stage createMainPage() throws IOException {
+		Stage primaryStage = new Stage();
+		Parent mainPage = FXMLLoader.load(this.mainClass.getClass().getResource("MainPage.fxml"));
+		Scene mainScene = new Scene(mainPage);
+		primaryStage.setTitle("Editor");
+		primaryStage.setScene(mainScene);
+		primaryStage.show();
+		AnchorPane anchorPane = (AnchorPane) primaryStage.getScene().lookup("#mainPane");
+		anchorPane.setMinHeight(9000);
+		setWindowSize(primaryStage);
+		return primaryStage;
+	}
+	private void setWindowSize(Stage stage) {
+		this.strategyMapping.get("flexible").setWindowSize(stage);
+	}
+}

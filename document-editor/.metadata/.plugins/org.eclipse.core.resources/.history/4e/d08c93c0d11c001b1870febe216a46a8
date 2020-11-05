@@ -1,0 +1,18 @@
+package abstract_pattern;
+
+import javafx.stage.Stage;
+
+public class WidgetFactorySmall extends WidgetFactory{
+
+	public WidgetFactorySmall(Stage stage) {
+		super(stage);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void createWidgets() {
+		// TODO Auto-generated method stub
+		stage.getScene().lookup("mainPane");
+	}
+
+}

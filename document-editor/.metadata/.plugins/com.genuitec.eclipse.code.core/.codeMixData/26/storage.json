@@ -1,0 +1,18 @@
+{
+    "telemetry.machineId": "49feb7136cd267763d49c7881bae9263cdd5e50255812c4e9e833cd4870cd68f",
+    "openedPathsList": {
+        "workspaces3": [
+            {
+                "id": "11a48411a68a8a9ec7c32e5c78d45198",
+                "configURIPath": "file:///c%3A/Users/user/Desktop/OO/OO-project/document-editor/.metadata/codemix.code-workspace"
+            },
+            {
+                "id": "99c9b7a4b1f37d3760fe0692acc922f2",
+                "configURIPath": "file:///c%3A/Users/user/Desktop/OO-project/document-editor/.metadata/codemix.code-workspace"
+            }
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#221a0f"
+}

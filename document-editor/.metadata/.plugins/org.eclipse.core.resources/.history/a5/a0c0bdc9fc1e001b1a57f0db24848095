@@ -1,0 +1,59 @@
+package abstract_pattern;
+
+import java.io.IOException;
+
+import bridge_pattern.FileItemProcess;
+import javafx.event.EventHandler;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
+
+public class WidgetFactorySmall extends WidgetFactory{
+	FileItemProcess fileitemprocess;
+
+	public WidgetFactorySmall(Stage stage) {
+		super(stage);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void createWidgets() {
+		// TODO Auto-generated method stub
+		MenuBar menuBar = new SmallMenuBar();
+		Menu fileMenu = new SmallMenu();
+		fileMenu.setText("File");
+		MenuItem fileNewMenuItem = new SmallMenuItem();
+		fileNewMenuItem.setText("New");
+		fileNewMenuItem.setOnAction(EventHandler -> {
+			HTMLEditor htmlEditor = (HTMLEditor) stage.getScene().lookup("#htmlEditor");
+			htmlEditor.setHtmlText("");
+		});
+		MenuItem fileSaveMenuItem = new SmallMenuItem();
+		fileSaveMenuItem.setText("Save");
+		fileSaveMenuItem.setOnAction(e -> {
+			fileitemprocess.SaveProcess(stage);
+        });
+		MenuItem fileOpenMenuItem = new SmallMenuItem();
+		fileOpenMenuItem.setText("Open");
+		fileOpenMenuItem.setOnAction(EventHandler->{
+			try {
+				fileitemprocess.OpenProcess(stage);
+			} catch (IOException e1) {
+			}
+		});
+		fileMenu.getItems().add(fileSaveMenuItem);
+		fileMenu.getItems().add(fileOpenMenuItem);
+		fileMenu.getItems().add(fileNewMenuItem);
+		menuBar.getMenus().add(fileMenu);
+		anchorPane.getChildren().add(menuBar);
+	}
+
+	@Override
+	public void setOperateSystem(FileItemProcess NowFileitemProcess) {
+		// TODO Auto-generated method stub
+		fileitemprocess = NowFileitemProcess;
+	}
+
+}

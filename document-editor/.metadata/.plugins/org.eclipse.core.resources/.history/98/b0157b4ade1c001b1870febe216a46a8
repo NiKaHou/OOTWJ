@@ -1,0 +1,9 @@
+package abstract_pattern;
+
+import javafx.scene.control.MenuItem;
+
+public class SmallMenuItem extends MenuItem{
+	public SmallMenuItem() {
+		this.setMnemonicParsing(false);
+	}
+}

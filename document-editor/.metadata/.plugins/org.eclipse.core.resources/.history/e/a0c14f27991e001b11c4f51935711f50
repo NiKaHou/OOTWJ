@@ -1,0 +1,13 @@
+package decorator_pattern;
+
+public class Border implements DecoratorComponent{
+	private String style;
+	public Border(DecoratorComponent component, String style) {
+		super(component);
+		this.style = style;
+	}
+
+	public String getStyle() {
+		return this.style + this.component.getStyle();
+	}
+}

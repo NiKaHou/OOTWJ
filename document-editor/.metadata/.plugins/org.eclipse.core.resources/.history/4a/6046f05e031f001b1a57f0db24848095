@@ -1,0 +1,12 @@
+package composite_pattern;
+
+public abstract class MenuBarComponent {
+	public void add(String title, MenuBarComponent component) {
+		
+	}
+	public void remove(String title) {
+		
+	}
+	abstract public String getTitle();
+	abstract public String getType();
+}

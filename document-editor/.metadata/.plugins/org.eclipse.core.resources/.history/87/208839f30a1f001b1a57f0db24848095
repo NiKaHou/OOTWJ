@@ -1,0 +1,21 @@
+package wordCount_Visitor_Iterator;
+
+import java.util.List;
+
+//concrete element1
+public class EnglishWord extends Sentence {
+	
+	private String engWord = null;
+	
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		v.visit(this);
+	}
+	
+	@Override
+	public void add(String word) {
+		this.engWord = word;
+		engWords.add(this);
+	}
+}

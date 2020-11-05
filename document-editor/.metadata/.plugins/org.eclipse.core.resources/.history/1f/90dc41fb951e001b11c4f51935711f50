@@ -1,0 +1,13 @@
+package decorator_pattern;
+
+public class Color extends Decorator{
+	public Color(DecoratorComponent component, String style) {
+		super(component, style);
+	}
+	public void setStyle(String style) {
+		this.component.setStyle(this.getStyle());
+	}
+	public String getStyle() {
+		return this.style;
+	}
+}

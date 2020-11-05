@@ -1,0 +1,10 @@
+package decorator;
+
+public class Decorator implements DecoratorComponent{
+
+	@Override
+	public void setStyle() {
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+package strategy_pattern;
+
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
+
+public class WindowNormal implements WindowColor{
+
+	@Override
+	public void setWindowSize(Stage stage) {
+		stage.setWidth(600);
+		stage.setHeight(900);
+		stage.setResizable(true);
+		HTMLEditor htmlEditor = (HTMLEditor)stage.getScene().lookup("#htmlEditor");
+		AnchorPane.setTopAnchor(htmlEditor, 32.0);
+	}
+}

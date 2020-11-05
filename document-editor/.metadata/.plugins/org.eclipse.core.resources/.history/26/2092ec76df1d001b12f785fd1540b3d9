@@ -1,0 +1,16 @@
+package decorator;
+
+public class Widget implements DecoratorComponent{
+	private String allStyle;
+	
+	@Override
+	public void getStyle() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public String getAllStyle() {
+		return allStyle; // -fx-background-color: red;
+	}
+	
+}

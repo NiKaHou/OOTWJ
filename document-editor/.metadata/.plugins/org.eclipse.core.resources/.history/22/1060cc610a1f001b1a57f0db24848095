@@ -1,0 +1,170 @@
+package abstract_pattern;
+
+import java.io.IOException;
+
+import bridge_pattern.FileItemProcess;
+import composite_pattern.MenuBarComponent;
+import decorator_pattern.Border;
+import decorator_pattern.Color;
+import decorator_pattern.DecoratorComponent;
+import decorator_pattern.Widget;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
+
+public class WidgetFactorySmall extends WidgetFactory{
+	FileItemProcess fileitemprocess;
+	private MenuBar menuBar;
+
+	public WidgetFactorySmall(Stage stage) {
+		super(stage);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void createWidgets() {
+		menuBar = new SmallMenuBar();
+		Menu fileMenu = createFileMenu();
+		Menu borderMenu = createBorderMenu();
+		
+		menuBar.getMenus().add(fileMenu);
+		menuBar.getMenus().add(borderMenu);
+
+		anchorPane.getChildren().add(menuBar);
+	}
+	
+	private Menu createFileMenu() {
+		Menu fileMenu = new SmallMenu();
+		fileMenu.setText("File");
+		MenuItem fileNewMenuItem = new SmallMenuItem();
+		fileNewMenuItem.setText("new");
+		fileNewMenuItem.setOnAction(EventHandler -> {
+			HTMLEditor htmlEditor = (HTMLEditor) stage.getScene().lookup("#htmlEditor");
+			htmlEditor.setHtmlText("");
+		});		
+		MenuItem fileSaveMenuItem = new SmallMenuItem();
+		fileSaveMenuItem.setText("save");
+		fileSaveMenuItem.setOnAction(EventHandler -> {
+			fileitemprocess.SaveProcess(stage);
+		});		
+		MenuItem fileLoadMenuItem = new SmallMenuItem();
+		fileLoadMenuItem.setText("load");
+		fileLoadMenuItem.setOnAction(EventHandler -> {
+			try {
+				fileitemprocess.OpenProcess(stage);
+			} catch (IOException e) {
+				
+			}
+		});		
+		fileMenu.getItems().add(fileNewMenuItem);
+		fileMenu.getItems().add(fileSaveMenuItem);
+		fileMenu.getItems().add(fileLoadMenuItem);
+		
+		return fileMenu;
+	}
+	
+	private Menu createBorderMenu() {
+		Menu borderMenu = new SmallMenu();
+		borderMenu.setText("border");
+		MenuItem borderThickMenuItem = new SmallMenuItem();
+		borderThickMenuItem.setText("blue thick");
+		borderThickMenuItem.setOnAction(EventHandler -> {
+			DecoratorComponent component = new Widget();
+
+			component = new Color(component, "blue");
+
+			component = new Border(component, "6px");
+			menuBar.setStyle(component.getStyle());
+		});		
+		MenuItem borderThinMenuItem = new SmallMenuItem();
+		borderThinMenuItem.setText("pink thin");
+		borderThinMenuItem.setOnAction(EventHandler -> {
+			DecoratorComponent component = new Widget();
+
+			component = new Color(component, "pink");
+
+			component = new Border(component, "3px");
+			menuBar.setStyle(component.getStyle());
+		});		
+		MenuItem borderNoneMenuItem = new SmallMenuItem();
+		borderNoneMenuItem.setText("none");
+		borderNoneMenuItem.setOnAction(EventHandler -> {
+			DecoratorComponent component = new Widget();
+
+			component = new Border(component, "0px");
+			menuBar.setStyle(component.getStyle());
+		});		
+		borderMenu.getItems().add(borderThickMenuItem);
+		borderMenu.getItems().add(borderThinMenuItem);
+		borderMenu.getItems().add(borderNoneMenuItem);
+		
+		return borderMenu;
+	}
+	private MenuBar createMenuBar(MenuBarComponent component) {
+		MenuBarComponent tmpMenuComponent;
+		MenuBarComponent tmpMenuItemComponent;
+		MenuBar menuBar = new SmallMenuBar();
+		while (component.hasChild()) {
+			tmpMenuComponent = component.getChild();
+			Menu menu = new SmallMenu();
+			menu.setText(tmpMenuComponent.getTitle());
+			menuBar.getMenus().add(menu);
+			while (tmpMenuComponent.hasChild()) {
+				tmpMenuItemComponent = tmpMenuComponent.getChild();
+				MenuItem menuItem = new SmallMenuItem();
+				menuItem.setText(tmpMenuItemComponent.getTitle());
+				setAction(menuItem, tmpMenuItemComponent.getTitle());
+				menu.getItems().add(menuItem);
+			}
+		}
+		return menuBar;
+	}
+	private void setAction(MenuItem menuItem, String functionName) {
+		if(functionName.equals("new")) {
+			menuItem.setOnAction(e -> {
+				HTMLEditor htmlEditor = (HTMLEditor) stage.getScene().lookup("#htmlEditor");
+				htmlEditor.setHtmlText("");
+			});
+		}else if (functionName.equals("save")) {
+			menuItem.setOnAction(e -> {
+				fileitemprocess.SaveProcess(stage);
+			});
+		}else if (functionName.equals("load")) {
+			menuItem.setOnAction(e -> {
+				try {
+					fileitemprocess.OpenProcess(stage);
+				} catch (IOException e1) {
+					
+				}
+			});
+		}else if (functionName.equals("thick blue")) {
+			menuItem.setOnAction(e -> {
+				DecoratorComponent component = new Widget();
+				component = new Color(component, "blue");
+				component = new Border(component, "6px");
+				menuBar.setStyle(component.getStyle());
+			});
+		}else if (functionName.equals("thin pink")) {
+			menuItem.setOnAction(e -> {
+				DecoratorComponent component = new Widget();
+				component = new Color(component, "pink");
+				component = new Border(component, "3px");
+				menuBar.setStyle(component.getStyle());
+			});
+		}else if (functionName.equals("none")) {
+			menuItem.setOnAction(e -> {
+				DecoratorComponent component = new Widget();
+				menuBar.setStyle(component.getStyle());
+			});
+		}
+	}
+
+	@Override
+	public void setOperateSystem(FileItemProcess NowFileitemProcess) {
+		// TODO Auto-generated method stub
+		fileitemprocess = NowFileitemProcess;
+	}
+
+}

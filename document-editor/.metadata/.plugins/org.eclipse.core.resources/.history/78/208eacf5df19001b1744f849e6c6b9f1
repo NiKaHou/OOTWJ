@@ -1,0 +1,26 @@
+package pattern_package;
+
+import java.io.IOException;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class WindowFactoryFullscreen<Main> extends WindowFactory<Main>{
+	public WindowFactoryFullscreen(Main mainClass) {
+		super(mainClass);
+	}
+
+	@Override
+	public void createMainPage() throws IOException {
+		Stage primaryStage = new Stage();
+		Parent mainPage = FXMLLoader.load(this.mainClass.getClass().getResource("MainPage.fxml"));
+		Scene mainScene = new Scene(mainPage);
+		primaryStage.setTitle("Editor");
+		primaryStage.setScene(mainScene);
+		AnchorPane anchorPane = (AnchorPane) primaryStage.getScene().lookup("#mainPane");
+		primaryStage.show();
+	}
+}

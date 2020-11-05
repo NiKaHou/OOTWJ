@@ -1,0 +1,13 @@
+package pattern_package;
+
+import java.io.IOException;
+
+import javafx.stage.Stage;
+
+abstract public class WindowFactory<Main> {
+	protected Main mainClass;
+	public WindowFactory(Main mainClass) {
+		this.mainClass = mainClass;
+	}
+	abstract public Stage createMainPage () throws IOException;
+}

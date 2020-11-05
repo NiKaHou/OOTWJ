@@ -1,0 +1,150 @@
+package abstract_pattern;
+
+import java.io.IOException;
+
+import bridge_pattern.FileItemProcess;
+import composite_pattern.MenuBarComponent;
+import composite_pattern.MenuBarComposite;
+import composite_pattern.MenuBarLeaf;
+import decorator_pattern.Border;
+import decorator_pattern.Color;
+import decorator_pattern.DecoratorComponent;
+import decorator_pattern.Widget;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
+
+public class WidgetFactoryLarge extends WidgetFactory{
+	FileItemProcess fileitemprocess;
+	private MenuBar menuBar;
+
+	public WidgetFactoryLarge(Stage stage) {
+		super(stage);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void createWidgets() {
+//		menuBar = new LargeMenuBar();
+//		Menu fileMenu = createFileMenu();
+//		Menu borderMenu = createBorderMenu();
+//		
+//		menuBar.getMenus().add(fileMenu);
+//		menuBar.getMenus().add(borderMenu);
+//
+//		anchorPane.getChildren().add(menuBar);
+		MenuBarComponent component = createMenuBarComponent();
+		menuBar = createMenuBar(component);
+		anchorPane.getChildren().add(menuBar);
+	}
+	private MenuBarComponent createMenuBarComponent() {
+		MenuBarComponent root = new MenuBarComposite("root", "MenuBar");
+		
+		MenuBarComponent file = new MenuBarComposite("file", "Menu");
+		MenuBarComponent newMenuBar = new MenuBarLeaf("new", "MenuItem");
+		MenuBarComponent saveMenuBar = new MenuBarLeaf("save", "MenuItem");
+		MenuBarComponent loadMenuBar = new MenuBarLeaf("load", "MenuItem");
+		file.add(newMenuBar.getTitle(), newMenuBar);
+		file.add(newMenuBar.getTitle(), saveMenuBar);
+		file.add(newMenuBar.getTitle(), loadMenuBar);
+		
+		MenuBarComponent menuStyle = new MenuBarComposite("menu style", "Menu");
+		MenuBarComponent thickBlue = new MenuBarLeaf("thick blue", "MenuItem");
+		MenuBarComponent thinPink = new MenuBarLeaf("thin pink", "MenuItem");
+		MenuBarComponent none = new MenuBarLeaf("none", "MenuItem");
+		menuStyle.add(newMenuBar.getTitle(), thickBlue);
+		menuStyle.add(newMenuBar.getTitle(), thinPink);
+		menuStyle.add(newMenuBar.getTitle(), none);
+
+		root.add(file.getTitle(), file);
+		root.add(menuStyle.getTitle(), menuStyle);
+		
+		return root;
+	}
+	private MenuBar createMenuBar(MenuBarComponent component) {
+		if(component.getType().equals("MenuBar")) {
+			MenuBar menuBar = new MenuBar();
+		}else if (component.getType().equals("Menu")) {
+			
+		}else if (component.getType().equals("MenuItem")) {
+			
+		}
+		return menuBar;
+	}
+	
+	private Menu createFileMenu() {
+		Menu fileMenu = new LargeMenu();
+		fileMenu.setText("File");
+		MenuItem fileNewMenuItem = new LargeMenuItem();
+		fileNewMenuItem.setText("new");
+		fileNewMenuItem.setOnAction(EventHandler -> {
+			HTMLEditor htmlEditor = (HTMLEditor) stage.getScene().lookup("#htmlEditor");
+			htmlEditor.setHtmlText("");
+		});		
+		MenuItem fileSaveMenuItem = new LargeMenuItem();
+		fileSaveMenuItem.setText("save");
+		fileSaveMenuItem.setOnAction(EventHandler -> {
+			fileitemprocess.SaveProcess(stage);
+		});		
+		MenuItem fileLoadMenuItem = new LargeMenuItem();
+		fileLoadMenuItem.setText("load");
+		fileLoadMenuItem.setOnAction(EventHandler -> {
+			try {
+				fileitemprocess.OpenProcess(stage);
+			} catch (IOException e) {
+				
+			}
+		});		
+		fileMenu.getItems().add(fileNewMenuItem);
+		fileMenu.getItems().add(fileSaveMenuItem);
+		fileMenu.getItems().add(fileLoadMenuItem);
+		
+		return fileMenu;
+	}
+	private Menu createBorderMenu() {
+		Menu borderMenu = new LargeMenu();
+		borderMenu.setText("border");
+		MenuItem borderThickMenuItem = new LargeMenuItem();
+		borderThickMenuItem.setText("blue thick");
+		borderThickMenuItem.setOnAction(EventHandler -> {
+			DecoratorComponent component = new Widget();
+
+			component = new Color(component, "blue");
+
+			component = new Border(component, "6px");
+			menuBar.setStyle(component.getStyle());
+		});		
+		MenuItem borderThinMenuItem = new LargeMenuItem();
+		borderThinMenuItem.setText("pink thin");
+		borderThinMenuItem.setOnAction(EventHandler -> {
+			DecoratorComponent component = new Widget();
+
+			component = new Color(component, "pink");
+
+			component = new Border(component, "3px");
+			menuBar.setStyle(component.getStyle());
+		});		
+		MenuItem borderNoneMenuItem = new LargeMenuItem();
+		borderNoneMenuItem.setText("none");
+		borderNoneMenuItem.setOnAction(EventHandler -> {
+			DecoratorComponent component = new Widget();
+
+			component = new Border(component, "0px");
+			menuBar.setStyle(component.getStyle());
+		});		
+		borderMenu.getItems().add(borderThickMenuItem);
+		borderMenu.getItems().add(borderThinMenuItem);
+		borderMenu.getItems().add(borderNoneMenuItem);
+		
+		return borderMenu;
+	}
+
+	@Override
+	public void setOperateSystem(FileItemProcess NowFileitemProcess) {
+		// TODO Auto-generated method stub
+		fileitemprocess = NowFileitemProcess;
+	}
+
+}

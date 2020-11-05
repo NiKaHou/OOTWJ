@@ -1,0 +1,21 @@
+package wordCount_Visitor_Iterator;
+
+import java.util.List;
+
+//concrete element2
+public class ChineseWord extends Sentence {
+
+	private String chiWord = null;
+	
+	@Override
+	public void accept(Visitor v) {
+		// TODO Auto-generated method stub
+		v.visit(this);
+	}
+	
+	@Override
+	public void add(String word) {
+		this.chiWord = word;
+		chiWords.add(this);
+	}
+}

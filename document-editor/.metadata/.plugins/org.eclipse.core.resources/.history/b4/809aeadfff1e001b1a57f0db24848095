@@ -1,0 +1,19 @@
+package composite_pattern;
+
+import javafx.scene.control.MenuItem;
+
+public class MenuBarLeaf extends MenuBarComponent{
+	private MenuItem menuItem;
+
+	@Override
+	public String getTitle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

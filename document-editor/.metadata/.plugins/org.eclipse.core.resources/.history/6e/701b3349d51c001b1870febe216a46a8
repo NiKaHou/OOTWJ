@@ -1,0 +1,14 @@
+package abstract_pattern;
+
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+abstract public class WidgetFactory {
+	protected Stage stage;
+	protected AnchorPane anchorPane = (AnchorPane) stage.getScene().lookup("#mainPane");
+
+	public WidgetFactory(Stage stage) {
+		this.stage = stage;
+	}
+	abstract public void createWidgets();
+}

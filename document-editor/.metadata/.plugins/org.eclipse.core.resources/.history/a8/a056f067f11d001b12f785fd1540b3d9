@@ -1,0 +1,10 @@
+package decorator_pattern;
+
+public interface Widgets extends DecoratorComponent{
+	@Override
+	public abstract String getStyle();
+	@Override
+	public default void setStyle(String style) {
+		this.setStyle(style);
+	}
+}

@@ -1,0 +1,21 @@
+package factory_pattern;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javafx.stage.Stage;
+import strategy_pattern.WindowSize;
+import strategy_pattern.WindowSizeSmall;
+import strategy_pattern.WindowSizeLarge;
+
+abstract public class WindowFactory<Main> {
+	protected Main mainClass;
+	protected Map<String, WindowSize> strategyMapping = new HashMap<String, WindowSize>();
+	public WindowFactory(Main mainClass) {
+		this.mainClass = mainClass;
+		this.strategyMapping.put("flexible", new WindowSizeSmall());
+		this.strategyMapping.put("fullSize", new WindowSizeLarge());
+	}
+	abstract public Stage createMainPage () throws IOException;
+}

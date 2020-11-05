@@ -1,0 +1,8 @@
+package composite_pattern;
+
+import java.util.List;
+
+public class MenuBarComposite extends MenuBarComponent{
+	List<MenuBarComponent> menuBarComponents;
+	
+}

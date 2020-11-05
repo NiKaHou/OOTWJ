@@ -1,0 +1,11 @@
+package strategy_pattern;
+
+import javafx.stage.Stage;
+
+public class WindowSizeFixed implements WindowSize{
+
+	@Override
+	public void setWindowSize(Stage stage) {
+		stage.setResizable(false);
+	}
+}

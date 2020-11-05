@@ -1,0 +1,10 @@
+package decorator;
+
+public class Widget implements DecoratorComponent{
+	
+	
+	@Override
+	public void getStyle() {
+
+	}
+}

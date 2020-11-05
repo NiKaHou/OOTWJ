@@ -1,0 +1,15 @@
+package abstract_pattern;
+
+import javafx.scene.control.ToolBar;
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
+
+abstract public class WidgetFactory {
+	protected Stage stage;
+	protected HTMLEditor htmlEditor;
+	protected ToolBar toolBar;
+	public WidgetFactory(Stage stage) {
+		this.stage = stage;
+	}
+	abstract public void createWidgets();
+}

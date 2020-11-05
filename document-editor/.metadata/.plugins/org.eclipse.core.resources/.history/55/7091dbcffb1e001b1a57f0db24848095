@@ -1,0 +1,11 @@
+package bridge_pattern;
+
+
+import java.io.FileNotFoundException;
+
+import javafx.stage.Stage;
+
+public interface FileItemProcess {
+	public void SaveProcess(Stage stage);
+	public void OpenProcess(Stage stage);
+}

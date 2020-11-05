@@ -1,0 +1,43 @@
+package factory_pattern;
+
+import java.io.IOException;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.HTMLEditor;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
+import strategy_pattern.WindowSizeFlexible;
+
+public class WindowFactoryFlexible<Main> extends WindowFactory<Main>{
+	public WindowFactoryFlexible(Main mainClass) {
+		super(mainClass);
+	}
+
+	@Override
+	public Stage createMainPage() throws IOException {
+		Stage primaryStage = new Stage();
+		Parent mainPage = FXMLLoader.load(this.mainClass.getClass().getResource("MainPage.fxml"));
+		Scene mainScene = new Scene(mainPage);
+		primaryStage.setTitle("Editor");
+		primaryStage.setScene(mainScene);
+		primaryStage.show();
+		AnchorPane anchorPane = (AnchorPane) primaryStage.getScene().lookup("#mainPane");
+		HTMLEditor htmlEditor = (HTMLEditor) primaryStage.getScene().lookup("#htmlEditor");
+		WebView webView = (WebView) htmlEditor.lookup(".web-view");
+		System.out.println(webView.getPrefHeight());
+		webView.setPrefHeight(900);
+		anchorPane.setMinHeight(9000);
+		anchorPane.setMaxHeight(9000);
+		anchorPane.setPrefHeight(90000);
+		System.out.println(webView.getPrefHeight());
+
+		setWindowSize(primaryStage);
+		return primaryStage;
+	}
+	private void setWindowSize(Stage stage) {
+		this.strategyMapping.get("flexible").setWindowSize(stage);
+	}
+}

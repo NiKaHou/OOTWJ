@@ -1,0 +1,42 @@
+package composite_pattern;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MenuBarComposite extends MenuBarComponent{
+	Map<String, MenuBarComponent> map = new HashMap<String, MenuBarComponent>();
+	private String title;
+	private String type;
+	public MenuBarComposite(String title, String type) {
+		this.title = title;
+		this.type = type;
+	}
+	@Override
+	public void add(String title, MenuBarComponent component) {
+		map.put(title, component);
+	}
+	@Override
+	public void remove(String title) {
+		map.remove(title);
+	}
+	@Override
+	public boolean hasChild() {
+		// TODO Auto-generated method stub
+		return super.hasChild();
+	}
+	@Override
+	public Map<String, MenuBarComponent> getChild() {
+		// TODO Auto-generated method stub
+		return super.getChild();
+	}
+	@Override
+	public String getTitle() {
+
+		return this.title;
+	}
+	@Override
+	public String getType() {
+
+		return this.type;
+	}
+}

@@ -1,0 +1,17 @@
+package decorator_pattern;
+
+
+public class Widget implements DecoratorComponent{
+	String style = "";
+	
+	@Override
+	public String getStyle() {
+		return this.style;
+	}
+
+	@Override
+	public void setStyle(String style) {
+		this.style = style;
+	}
+	
+}

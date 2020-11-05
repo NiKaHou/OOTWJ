@@ -1,0 +1,25 @@
+package composite_pattern;
+
+import java.util.List;
+
+import javafx.scene.control.Menu;
+
+public class MenuBarComposite extends MenuBarComponent{
+	List<MenuBarComponent> menuBarComponents;
+	private String title;
+	private String type;
+	public MenuBarComposite(String title, String type) {
+		this.title = title;
+		this.type = type;
+	}
+	@Override
+	public String getTitle() {
+
+		return this.title;
+	}
+	@Override
+	public String getType() {
+
+		return this.type;
+	}
+}

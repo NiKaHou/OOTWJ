@@ -1,0 +1,15 @@
+package strategy_pattern;
+
+import javafx.stage.Stage;
+
+public class WindowSizeFlexible implements WindowSize{
+
+	@Override
+	public void setWindowSize(Stage stage) {
+		stage.setWidth(650);
+		stage.setHeight(900);
+		
+		stage.setFullScreen(true);
+	}
+	
+}

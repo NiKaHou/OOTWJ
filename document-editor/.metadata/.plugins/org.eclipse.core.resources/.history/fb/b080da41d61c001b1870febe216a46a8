@@ -1,0 +1,7 @@
+package abstract_pattern;
+
+import javafx.scene.web.HTMLEditor;
+
+public class ProductHtmlEditor extends HTMLEditor{
+	
+}
